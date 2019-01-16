@@ -1,0 +1,57 @@
+<style>
+*{
+    background: #f4e1d2;
+    margin : auto;
+    text-align : center;
+}
+h1{
+    font-color : #f18973;
+    margin : auto;
+    padding : 10px;
+    font-size : 300%;
+    text-shadow : 2px 3px #f18973;
+}
+a{
+    color : #b2b2b2;
+    background-color : #f4e1d2;
+    border : 2px solid #f18973;
+    text-align : center;
+    padding : 10px;
+    margin : 30px;
+    text-decoration : underline;
+    display : inline-block;
+    border-radius : 5px;
+}
+a:hover, input:hover{
+    background-color : #f18973;
+    color : white;
+}
+input{
+    color : #b2b2b2;
+    background-color : #f4e1d2;
+    border : 2px solid #f18973;
+    text-align : center;
+    padding : 10px;
+    margin : 30px;
+    text-decoration : underline;
+    display : inline-block;
+    border-radius : 5px;
+    font-size: 19.5px;
+}
+textarea{
+    background: white;
+    border : 3px solid #f18973;
+    padding : 40px;
+    margin : 30px;
+    border-radius : 10px;
+}
+</style>
+<head>
+<h1>WORD COUNTER</h1>
+</head>
+<form action="{% url 'result' %}">
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br>
+    <a href="{% url 'about' %}">ABOUT</a>
+    <input type="submit" value="Count" />
+</form>
